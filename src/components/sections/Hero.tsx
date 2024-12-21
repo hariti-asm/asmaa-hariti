@@ -1,7 +1,6 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Download } from 'lucide-react';
 import { Button } from '../ui/Button';
-import ProfileImage from '../ui/images/asmaa2.jpeg';
 
 export function Hero() {
   return (
@@ -17,7 +16,7 @@ export function Hero() {
               Passionate Java developer specializing in building robust and scalable applications with Spring Boot. 
               Experienced in creating RESTful APIs, implementing microservices, and developing enterprise-level solutions.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex flex-wrap gap-4">
               <Button variant="primary" as="a" href="#projects">
                 View My Work
                 <ArrowRight className="ml-2 w-4 h-4" />
@@ -25,19 +24,16 @@ export function Hero() {
               <Button variant="secondary" as="a" href="#contact">
                 Contact Me
               </Button>
+            
             </div>
           </div>
           <div className="md:w-1/2 mt-10 md:mt-0">
-          <div className="w-full h-auto relative">
-              <div className="w-64 h-64 mx-auto rounded-full overflow-hidden">
-                <img
-                  src={ProfileImage}
-                  alt="Profile"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-</div>
-</div>
+            <img
+              src="/asmaa2.jpeg"
+              alt="Profile"
+              className="rounded-full w-64 h-64 object-cover mx-auto border-4 border-white shadow-xl"
+            />
+          </div>
         </div>
       </div>
     </section>
