@@ -1,6 +1,8 @@
 import React from 'react';
 import { ArrowRight, Download } from 'lucide-react';
 import { Button } from '../ui/Button';
+import profileImage from '../../assets/images/asmaa2.jpeg';
+
 
 export function Hero() {
   return (
@@ -24,12 +26,12 @@ export function Hero() {
               <Button variant="secondary" as="a" href="#contact">
                 Contact Me
               </Button>
-            
             </div>
           </div>
           <div className="md:w-1/2 mt-10 md:mt-0">
             <img
-              src="/asmaa2.jpeg"
+           src={profileImage}
+
               alt="Profile"
               className="rounded-full w-64 h-64 object-cover mx-auto border-4 border-white shadow-xl"
             />
