@@ -1,6 +1,23 @@
 import { Project } from '../types';
 
 export const projects: Project[] = [
+  
+  {
+    title: 'Interview Simulator',
+    description: 'Developed an interview preparation simulator that generates real-time technical questions and tracks user responses. Aimed at helping developers prepare effectively for coding interviews.',
+    image: 'https://images.openai.com/thumbnails/64e6067fad68a0c6002baae6c6f13595.jpeg',
+    technologies: ['React', 'TypeScript', 'Node.js', 'Express', 'MongoDB'],
+    company: 'Personal Project',
+    date: '2025',
+    details: [
+      'Real-time technical question generation',
+      'User progress tracking and analytics',
+      'Frontend built with React and TypeScript',
+      'Backend with Node.js and Express',
+      'MongoDB for storing user sessions and questions',
+      'Project link: https://github.com/hariti-asm/interview_simulator'
+    ]
+  },
   {
     title: 'CitronTrack - Lemon Farm Management',
     description: 'A comprehensive farm management platform designed to help lemon farmers efficiently track production, harvests, and sales. Built with Spring Boot, following multi-layer architecture.',
