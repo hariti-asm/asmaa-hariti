@@ -12,9 +12,9 @@ export const projects: Project[] = [
     details: [
       'Real-time technical question generation',
       'User progress tracking and analytics',
-      'Frontend built with React and TypeScript',
-      'Backend with Node.js and Express',
-      'MongoDB for storing user sessions and questions',
+      'Frontend built with Angular and TypeScript',
+      'Backend with Java Spring Boot',
+      'Posgresql for storing user sessions and questions',
       'Project link: https://github.com/hariti-asm/interview_simulator'
     ]
   },
