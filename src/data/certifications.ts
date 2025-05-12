@@ -34,6 +34,14 @@ export const certifications: Certification[] = [
     linkedInUrl: 'https://www.linkedin.com/in/asmaa-hariti/details/certifications/'
   },
   {
+    title: 'Oracle Certified Professional',
+    organization: 'Oracle',
+    date: '2024',
+    description: 'Advanced certification validating professional-level skills in Java development, OOP principles, and software architecture.',
+    image: 'https://images.unsplash.com/photo-1531497865141-5f46a2005a36?auto=format&fit=crop&w=800&h=500',
+    linkedInUrl: 'https://www.linkedin.com/in/asmaa-hariti/details/certifications/'
+  },
+  {
     title: 'IBM Full Stack Professional Developer',
     organization: 'IBM',
     date: '2023',

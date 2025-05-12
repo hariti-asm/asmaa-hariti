@@ -6,7 +6,7 @@ export const projects: Project[] = [
     title: 'Interview Simulator',
     description: 'Developed an interview preparation simulator that generates real-time technical questions and tracks user responses. Aimed at helping developers prepare effectively for coding interviews.',
     image: 'https://images.openai.com/thumbnails/64e6067fad68a0c6002baae6c6f13595.jpeg',
-    technologies: ['React', 'TypeScript', 'Node.js', 'Express', 'MongoDB'],
+    technologies: ['Angular', 'TypeScript', 'Node.js', 'Express', 'MongoDB'],
     company: 'Personal Project',
     date: '2025',
     details: [
