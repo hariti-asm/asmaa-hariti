@@ -6,6 +6,7 @@ export interface Project {
   company: string;
   date: string;
   details?: string[];
+  featured?: boolean;
 }
 
 export interface Certification {

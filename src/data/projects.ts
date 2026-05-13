@@ -1,12 +1,28 @@
 import { Project } from '../types';
 
 export const projects: Project[] = [
-  
+  {
+    title: 'myDoctor - Telemedicine Ecosystem',
+    description: 'A high-performance, full-stack telemedicine platform engineered with Angular Micro-Frontends (MFE) and Java Spring Boot Microservices. Features AI-driven symptom checking, secure Stripe payments, and automated medical record pipelines.',
+    image: '/mydoctor_mockup.png',
+    technologies: ['Java 21', 'Spring Boot 3.5', 'Angular 18', 'Nx', 'Stripe', 'AWS EKS', 'Terraform', 'Cypress'],
+    company: 'Personal Project',
+    date: '2025',
+    featured: true,
+    details: [
+      'Orchestrated 7 independent microservices using Spring Cloud Gateway and Eureka.',
+      'Developed 4 independent Micro-Frontends using Webpack Module Federation.',
+      'Integrated AI-driven symptom checker and NLP suggestion engine.',
+      'Implemented secure financial transactions using Stripe API and webhooks.',
+      'Automated medical record generation with AWS S3 and Transcribe.',
+      'Achieved 100% reliability in core journeys with a stabilized Cypress E2E suite.'
+    ]
+  },
   {
     title: 'Interview Simulator',
     description: 'Developed an interview preparation simulator that generates real-time technical questions and tracks user responses. Aimed at helping developers prepare effectively for coding interviews.',
     image: 'https://images.openai.com/thumbnails/64e6067fad68a0c6002baae6c6f13595.jpeg',
-    technologies: ['Angular', 'TypeScript', 'Node.js', 'Express', 'MongoDB'],
+    technologies: ['Spring Boot', 'Java', 'PostgreSQL', 'JUnit', 'Mockito', 'Angular'],
     company: 'Personal Project',
     date: '2025',
     details: [

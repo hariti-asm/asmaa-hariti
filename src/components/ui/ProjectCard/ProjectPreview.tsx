@@ -7,17 +7,26 @@ interface ProjectPreviewProps {
 
 export function ProjectPreview({ project }: ProjectPreviewProps) {
   return (
-    <div className="relative h-64">
+    <div className="relative h-64 overflow-hidden group">
       <img
         src={project.image}
         alt={project.title}
-        className="w-full h-full object-cover"
+        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
-      <div className="absolute bottom-4 left-4 right-4 text-white">
-        <div className="text-sm text-blue-300 mb-1">{project.date}</div>
-        <h3 className="text-xl font-bold mb-1">{project.title}</h3>
-        <div className="text-sm text-gray-200">{project.company}</div>
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent" />
+      
+      {project.featured && (
+        <div className="absolute top-4 right-4 z-20">
+          <span className="px-3 py-1 text-xs font-bold uppercase tracking-wider text-white bg-indigo-600 rounded-full shadow-lg border border-indigo-400">
+            Featured
+          </span>
+        </div>
+      )}
+
+      <div className="absolute bottom-6 left-6 right-6 text-white z-20">
+        <div className="text-xs font-bold text-indigo-400 mb-2 uppercase tracking-widest">{project.date}</div>
+        <h3 className="text-2xl font-black mb-1 tracking-tight">{project.title}</h3>
+        <div className="text-sm font-medium text-slate-300">{project.company}</div>
       </div>
     </div>
   );

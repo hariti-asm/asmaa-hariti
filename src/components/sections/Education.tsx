@@ -1,20 +1,25 @@
 import React from 'react';
 import { education } from '../../data/education';
-import { EducationCard } from '../ui/EducationCard';
-import { SectionTitle } from '../ui/SectionTitle';
 
 export function Education() {
   return (
-    <section id="education" className="py-24 bg-gradient-to-b from-white to-gray-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionTitle>Educational Background</SectionTitle>
-        <p className="text-gray-600 text-center max-w-2xl mx-auto mb-12">
-          My academic journey has equipped me with a strong foundation in computer science,
-          engineering principles, and practical development skills.
-        </p>
+    <section id="education" className="py-24 bg-white">
+      <div className="section-container">
+        <div className="flex flex-col mb-16">
+          <h2 className="text-3xl font-black text-slate-900 tracking-tight">Academic History</h2>
+          <div className="h-1 w-20 bg-blue-600 mt-4 rounded-full"></div>
+        </div>
+
         <div className="space-y-6">
           {education.map((edu, index) => (
-            <EducationCard key={index} education={edu} />
+            <div key={index} className="ui-card p-8 flex flex-col md:flex-row justify-between gap-6 items-start">
+              <div className="space-y-2">
+                <h3 className="text-2xl font-black text-slate-900">{edu.degree}</h3>
+                <p className="text-blue-600 font-bold text-lg">{edu.institution}</p>
+                <div className="text-slate-400 text-sm font-bold uppercase tracking-widest">{edu.location}</div>
+              </div>
+              <div className="text-slate-500 font-black text-sm bg-slate-50 px-4 py-2 rounded-lg border border-slate-100">{edu.duration}</div>
+            </div>
           ))}
         </div>
       </div>

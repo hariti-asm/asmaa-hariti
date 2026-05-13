@@ -2,6 +2,13 @@ import { Education } from '../types/education';
 
 export const education: Education[] = [
   {
+    degree: "Master's in Software Engineering and Information Systems Management",
+    institution: "National School of Applied Sciences (ENSA)",
+    duration: "2024 - 2026",
+    location: "Morocco",
+    description: "Advanced specialization in software architecture, information systems management, and enterprise-scale development."
+  },
+  {
     degree: "Web Development",
     institution: "YouCode Safi",
     duration: "2023 - 2025",

@@ -10,28 +10,35 @@ export function ProjectDetails({ project, isExpanded }: ProjectDetailsProps) {
   return (
     <div 
       className={`
-        absolute inset-0 bg-white/95 backdrop-blur-sm
-        transition-all duration-300 
-        ${isExpanded ? 'opacity-100' : 'opacity-0 pointer-events-none'}
+        absolute inset-0 bg-slate-900/95 backdrop-blur-xl
+        transition-all duration-500 
+        ${isExpanded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-full pointer-events-none'}
       `}
     >
-      <div className="p-6 h-full overflow-auto">
-        <h3 className="text-xl font-bold mb-2 text-gray-900">{project.title}</h3>
-        <p className="text-gray-600 mb-4">{project.description}</p>
+      <div className="p-8 h-full flex flex-col justify-between overflow-auto scrollbar-hide">
+        <div>
+          <div className="flex justify-between items-start mb-4">
+            <h3 className="text-2xl font-black text-white tracking-tight">{project.title}</h3>
+          </div>
+          <p className="text-slate-300 text-sm leading-relaxed mb-6 font-medium">{project.description}</p>
+          
+          {project.details && (
+            <div className="space-y-3 mb-8">
+              {project.details.map((detail, index) => (
+                <div key={index} className="flex items-start space-x-3 group/item">
+                  <div className="mt-1.5 h-1.5 w-1.5 rounded-full bg-indigo-500 flex-shrink-0 group-hover/item:scale-125 transition-transform" />
+                  <span className="text-sm text-slate-400 group-hover/item:text-slate-200 transition-colors">{detail}</span>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
         
-        {project.details && (
-          <ul className="list-disc list-inside mb-4 text-gray-600 space-y-1">
-            {project.details.map((detail, index) => (
-              <li key={index}>{detail}</li>
-            ))}
-          </ul>
-        )}
-        
-        <div className="flex flex-wrap gap-2 mt-auto">
+        <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-800">
           {project.technologies.map((tech, i) => (
             <span
               key={i}
-              className="px-3 py-1 bg-blue-50 text-blue-700 text-sm rounded-full"
+              className="px-2.5 py-1 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-[10px] font-bold uppercase tracking-wider rounded-md"
             >
               {tech}
             </span>
