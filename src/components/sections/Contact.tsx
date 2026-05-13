@@ -54,7 +54,7 @@ export function Contact() {
         </div>
         
         <div className="mt-24 pt-8 border-t border-slate-200 text-center">
-          <p className="text-slate-400 text-sm font-bold uppercase tracking-widest">© 2026 Asmaa Hariti • Software Architect</p>
+          <p className="text-slate-400 text-sm font-bold uppercase tracking-widest">© 2026 Asmaa Hariti • Software Engineer</p>
         </div>
       </div>
     </section>
