@@ -1,26 +1,29 @@
 import React from 'react';
 import { Header } from './components/layout/Header';
 import { Hero } from './components/sections/Hero';
-import { Skills } from './components/sections/Skills';
+import { About } from './components/sections/About';
+import { BackgroundSummary } from './components/sections/BackgroundSummary';
+import { ProjectHighlights } from './components/sections/ProjectHighlights';
 import { Education } from './components/sections/Education';
 import { Projects } from './components/sections/Projects';
-import { FeaturedProject } from './components/sections/FeaturedProject';
+import { WorkHistory } from './components/sections/WorkHistory';
 import { Certifications } from './components/sections/Certifications';
 import { Contact } from './components/sections/Contact';
 import { Footer } from './components/layout/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 selection:bg-indigo-500 selection:text-white">
-      <div className="fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-indigo-100 via-white to-purple-50"></div>
+    <div className="min-h-screen bg-[#030712]">
       <Header />
       <main>
         <Hero />
-        <Skills />
+        <About />
+        <BackgroundSummary />
+        <ProjectHighlights />
+        <WorkHistory />
         <Education />
-        <FeaturedProject />
-        <Projects />
         <Certifications />
+        <Projects />
         <Contact />
       </main>
       <Footer />

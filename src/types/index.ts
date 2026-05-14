@@ -7,6 +7,8 @@ export interface Project {
   date: string;
   details?: string[];
   featured?: boolean;
+  githubUrl?: string;
+  liveUrl?: string;
 }
 
 export interface Certification {

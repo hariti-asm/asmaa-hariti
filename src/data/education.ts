@@ -1,39 +1,31 @@
-import { Education } from '../types/education';
+export interface Education {
+  degree: string;
+  institution: string;
+  location: string;
+  duration: string;
+  image?: string;
+}
 
 export const education: Education[] = [
   {
-    degree: "Master's in Software Engineering and Information Systems Management",
-    institution: "National School of Applied Sciences (ENSA)",
-    duration: "2024 - 2026",
-    location: "Morocco",
-    description: "Advanced specialization in software architecture, information systems management, and enterprise-scale development."
+    degree: 'Master\'s Degree in Software Engineering and Information Systems Management',
+    institution: 'ENSA Kénitra',
+    location: 'Kénitra',
+    duration: '2025 - 2027',
+    image: '/image.png'
   },
   {
-    degree: "Web Development",
-    institution: "YouCode Safi",
-    duration: "2023 - 2025",
-    location: "Safi, Morocco",
-    description: "Full-stack development specialization with focus on modern web technologies and agile methodologies"
+    degree: 'Software Engineering',
+    institution: 'UM6P (YouCode)',
+    location: 'Safi',
+    duration: '2023 - 2025',
+    image: '/um6p.png'
   },
   {
-    degree: "Bachelor's Degree in Computer Engineering",
-    institution: "Faculty of Sciences and Techniques",
-    duration: "2021 - 2023",
-    location: "Settat, Morocco",
-    description: "Advanced studies in software engineering, algorithms, and system design"
-  },
-  {
-    degree: "DEUST in Mathematics, Computer Science, and Physics",
-    institution: "Faculty of Sciences and Techniques",
-    duration: "2019 - 2021",
-    location: "Settat, Morocco",
-    description: "Foundational studies in computer science, mathematics, and physics"
-  },
-  {
-    degree: "Baccalaureate in Physical Sciences",
-    institution: "High School of Khalid Ben Lwalid",
-    duration: "2018 - 2019",
-    location: "Morocco",
-    description: "Scientific track with emphasis on physics and mathematics"
+    degree: 'Bachelor\'s Degree in Computer Science',
+    institution: 'FST Settat (Hassan 1st University)',
+    location: 'Settat',
+    duration: '2019 - 2023',
+    image: '/fst.png'
   }
 ];

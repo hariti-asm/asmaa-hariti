@@ -1,51 +1,56 @@
 import React from 'react';
 import { Project } from '../../../types';
-import { ArrowUpRight, Github } from 'lucide-react';
+import { Github, ExternalLink, Image as ImageIcon } from 'lucide-react';
 
 interface ProjectCardProps {
   project: Project;
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
+  const isFreelance = project.company === 'FREELANCE';
+  
   return (
-    <div className="group ui-card overflow-hidden flex flex-col h-full">
-      <div className="aspect-[16/9] relative overflow-hidden bg-slate-100">
-        <img 
-          src={project.image} 
-          alt={project.title} 
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-        />
-        <div className="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/10 transition-colors"></div>
-      </div>
-
-      <div className="p-8 flex flex-col flex-1 space-y-6">
-        <div className="space-y-3">
-          <h3 className="text-2xl font-black text-slate-900 group-hover:text-blue-600 transition-colors">
-            {project.title}
-          </h3>
-          <p className="text-slate-600 font-medium leading-relaxed line-clamp-3">
-            {project.description}
-          </p>
-        </div>
-
-        <div className="flex flex-wrap gap-2 pt-2">
-          {project.technologies.slice(0, 4).map((tech, i) => (
-            <span key={i} className="px-2 py-1 bg-slate-50 text-slate-500 text-[10px] font-bold uppercase tracking-wider rounded-md border border-slate-100">
-              {tech}
-            </span>
-          ))}
-        </div>
-
-        <div className="pt-6 mt-auto flex items-center justify-between border-t border-slate-100">
-          <div className="flex items-center gap-4">
-            <a href="https://github.com/hariti-asm" target="_blank" className="text-slate-400 hover:text-slate-900 transition-colors">
+    <div className="project-card group hover:translate-y-[-4px]">
+      <div className="flex justify-between items-start mb-6">
+        <span className={`px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest border ${
+          isFreelance 
+            ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20' 
+            : 'bg-amber-500/10 text-amber-400 border-amber-500/20'
+        }`}>
+          {project.company}
+        </span>
+        
+        <div className="flex gap-3">
+          {project.githubUrl && (
+            <a href={project.githubUrl} target="_blank" className="p-2 rounded-lg text-slate-500 hover:text-white hover:bg-white/5 transition-all">
               <Github className="w-5 h-5" />
             </a>
-          </div>
-          <div className="text-blue-600 group-hover:translate-x-1 transition-transform">
-            <ArrowUpRight className="w-5 h-5" />
-          </div>
+          )}
+          <a href="#" className="p-2 rounded-lg text-slate-500 hover:text-white hover:bg-white/5 transition-all">
+            <ExternalLink className="w-5 h-5" />
+          </a>
         </div>
+      </div>
+
+      <div className="space-y-4 mb-6">
+        <div>
+          <h3 className="text-2xl font-black text-white group-hover:text-blue-400 transition-colors">
+            {project.title}
+          </h3>
+          <div className="text-xs font-bold text-slate-600 mt-1 uppercase tracking-widest">{project.date}</div>
+        </div>
+        
+        <p className="text-sm text-slate-400 leading-relaxed font-light line-clamp-4">
+          {project.description}
+        </p>
+      </div>
+
+      <div className="project-tech mt-auto">
+        {project.technologies.map((tech, i) => (
+          <span key={i} className="tech-tag">
+            {tech}
+          </span>
+        ))}
       </div>
     </div>
   );

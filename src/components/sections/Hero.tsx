@@ -1,63 +1,62 @@
 import React from 'react';
-import { Github, Linkedin, Mail, ArrowRight } from 'lucide-react';
+import { Github, Linkedin, FileText } from 'lucide-react';
 
 export function Hero() {
   const profileImage = "/profile_professional_v2.png";
   
   return (
-    <section id="home" className="pt-32 pb-20 lg:pt-48 lg:pb-32 relative">
-      <div className="section-container">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          <div className="order-2 lg:order-1 space-y-8">
-            <div className="space-y-4">
-              <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-xs font-bold uppercase tracking-wider">
-                Software Engineer
-              </div>
-              <h1 className="text-5xl lg:text-7xl font-black text-slate-900 leading-tight">
-                Engineering <br />
-                <span className="text-blue-600">Reliable</span> Solutions.
-              </h1>
-            </div>
-            
-            <p className="text-lg lg:text-xl text-slate-600 font-medium leading-relaxed max-w-xl">
-              Asmaa Hariti designs and builds high-performance distributed systems. 
-              Specialized in Spring Boot, Angular, and enterprise-grade microservices.
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-center gap-6 pt-4">
-              <a href="#projects" className="btn-action w-full sm:w-auto text-center">
-                Explore Projects
-                <ArrowRight className="inline ml-2 w-4 h-4" />
-              </a>
-              
-              <div className="flex items-center gap-6 text-slate-400">
-                <a href="https://github.com/hariti-asm" target="_blank" className="hover:text-blue-600 transition-colors">
-                  <Github className="w-6 h-6" />
-                </a>
-                <a href="https://linkedin.com/in/asmaa-hariti" target="_blank" className="hover:text-blue-600 transition-colors">
-                  <Linkedin className="w-6 h-6" />
-                </a>
-                <a href="mailto:haritiasmaa74@gmail.com" className="hover:text-blue-600 transition-colors">
-                  <Mail className="w-6 h-6" />
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div className="order-1 lg:order-2">
-            <div className="relative">
-              <div className="absolute -inset-4 bg-blue-100 rounded-[2.5rem] -rotate-3"></div>
-              <div className="relative bg-white p-4 rounded-[2.5rem] shadow-2xl">
-                <img 
-                  src={profileImage} 
-                  alt="Asmaa Hariti" 
-                  className="w-full h-auto rounded-[1.5rem] object-cover"
-                />
-              </div>
-            </div>
+    <section id="home" className="hero min-h-screen pt-32 pb-24 relative overflow-hidden flex items-center justify-center">
+      {/* Grid Background */}
+      <div className="absolute inset-0 grid-bg opacity-30"></div>
+      
+      {/* Background Glows */}
+      <div className="glow-bg top-[-10%] left-[20%] w-[500px] h-[500px] bg-blue-600/10"></div>
+      <div className="glow-bg bottom-[10%] right-[20%] w-[400px] h-[400px] bg-purple-600/10"></div>
+      
+      <div className="section-container text-center space-y-8 relative z-10">
+        <div className="relative inline-block group mb-4">
+          <div className="absolute -inset-1.5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+          <div className="relative w-40 h-40 rounded-full overflow-hidden border-2 border-white/10 shadow-2xl hover:shadow-[0_0_80px_rgba(59,130,246,0.4)] transition-shadow duration-500 mx-auto">
+            <img 
+              src={profileImage} 
+              alt="Asmaa Hariti" 
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
+
+        <div>
+          <h1 className="hero-name">
+            Asmaa Hariti
+          </h1>
+          <p className="hero-title">
+            SOFTWARE ENGINEER <span className="text-slate-800 mx-2">|</span> FULL STACK DEVELOPER <span className="text-slate-800 mx-2">|</span> JAVA SPECIALIST
+          </p>
+        </div>
+
+        <div className="flex flex-wrap items-center justify-center gap-6 pt-4">
+          <a href="https://linkedin.com/in/asmaa-hariti" target="_blank" className="btn-gradient px-8 py-4 shadow-[0_0_30px_rgba(59,130,246,0.3)]">
+            <Linkedin className="w-5 h-5 fill-white" />
+            Get in touch
+          </a>
+          <a href="/Asmaa_Hariti_CV.pdf" target="_blank" className="btn-outline px-8 py-4 bg-transparent">
+            <FileText className="w-5 h-5 text-slate-400" />
+            Download CV
+          </a>
+        </div>
+
       </div>
+
+      {/* Scroll Indicator */}
+      <a 
+        href="#about" 
+        className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 group cursor-pointer z-20 hover:scale-105 transition-transform"
+      >
+        <span className="text-[10px] font-black tracking-[0.4em] text-slate-500 uppercase group-hover:text-blue-400 transition-colors">
+          SCROLL
+        </span>
+        <div className="mouse-scroll opacity-60 group-hover:opacity-100 group-hover:border-blue-400 transition-all"></div>
+      </a>
     </section>
   );
 }
