@@ -16,7 +16,7 @@ export const projects: Project[] = [
     description: 'A robust banking application featuring secure transaction management, real-time balance updates, and comprehensive account auditing.',
     image: 'https://images.unsplash.com/photo-1601597111158-2fcee27019ed?auto=format&fit=crop&w=800&h=500',
     technologies: ['Java', 'JEE', 'PostgreSQL', 'Docker'],
-    company: 'PERSONAL',
+    company: 'ACADEMIC',
     date: '2024',
     githubUrl: 'https://github.com/hariti-asm/SmartBank'
   },
@@ -24,8 +24,8 @@ export const projects: Project[] = [
     title: 'CliniConnect',
     description: 'Advanced clinic management system streamlining patient appointments, medical history, and clinical workflow optimization.',
     image: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&h=500',
-    technologies: ['Java', 'Spring Boot', 'MySQL', 'JWT'],
-    company: 'PERSONAL',
+    technologies: ['Laravel', 'Vue.js', 'PostgreSQL', 'Blade'],
+    company: 'ACADEMIC',
     date: '2024',
     githubUrl: 'https://github.com/hariti-asm/CliniConnect'
   },
